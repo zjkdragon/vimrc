@@ -1,29 +1,40 @@
-"¿ªÆôÖĞÎÄ°ïÖú
+"altè®¾ç½®æˆmetaé”®
+noremap <M-x> :echo "ALT-X pressed"<cr>
+exec "set <M-x>=\ex"
+set ttimeout ttimeoutlen=100
+
+"user path
+let g:userpath = $HOME
+
+"nnoremap[næ¨¡å¼ä¸é€’å½’æ˜ å°„]
+nnoremap <leader>ev :e $HOME/.vimrc<cr>
+
+"å¼€å¯ä¸­æ–‡å¸®åŠ©
 set helplang=cn
 
-"¿ªÆôÊó±êÖ§³Ö
+"å¼€å¯é¼ æ ‡æ”¯æŒ
 set mouse=a
 
-"¹Ø±Õ×Ô¶¯ÕÛĞĞ
+"å…³é—­è‡ªåŠ¨æŠ˜è¡Œ
 "set wrap
 set nowrap
 
-"ÉèÖÃÕÛµş·½Ê½
+"è®¾ç½®æŠ˜å æ–¹å¼
 set foldmethod=manual
 
-"É¾³ıÔöÇ¿
+"åˆ é™¤å¢å¼º
 set backspace=2
 
-"±àÂëÉèÖÃ
+"ç¼–ç è®¾ç½®
 set encoding=utf-8
 set fileencodings=utf-8,ucs-bom,gb2312,chinese,prc,taiwan,latin-1
 set termencoding=utf-8
 
-"ÏÔÊ¾ĞĞºÅ
+"æ˜¾ç¤ºè¡Œå·
 set number
 set rnu
 
-"Ëõ½øÉèÖÃ
+"ç¼©è¿›è®¾ç½®
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
@@ -32,11 +43,11 @@ set autoindent
 set smarttab
 set expandtab
 
-"Ò»ĞĞµÄ×Ö·û³¬³ö80¸öµÄ»°¾Í°ÑÄÇĞ©×Ö·ûµÄ±³¾°ÉèÎªºìÉ«
+"ä¸€è¡Œçš„å­—ç¬¦è¶…å‡º80ä¸ªçš„è¯å°±æŠŠé‚£äº›å­—ç¬¦çš„èƒŒæ™¯è®¾ä¸ºçº¢è‰²
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 match OverLength /\%81v.\+/
 
-"GUIÉèÖÃ
+"GUIè®¾ç½®
 set guioptions-=T
 set guioptions-=r
 set guioptions-=L
@@ -44,59 +55,71 @@ set guioptions+=i
 set guioptions-=m
 set guioptions+=c
 
-"¹Ø±Õvi¼æÈİÄ£Ê½
+"å…³é—­viå…¼å®¹æ¨¡å¼
 set nocompatible
 
-"ÉèÖÃ¹â±ê¾àÀëÉÏÏÂ±ß½çµÄ¾àÀë
+"è®¾ç½®å…‰æ ‡è·ç¦»ä¸Šä¸‹è¾¹ç•Œçš„è·ç¦»
 set so=1
 
-"ºöÂÔ´óĞ¡Ğ´Æ¥Åä
+"å¿½ç•¥å¤§å°å†™åŒ¹é…
 set ignorecase
 
-"¿ªÆôÊäÈëÊ±µÄËÑË÷
+"å¼€å¯è¾“å…¥æ—¶çš„æœç´¢
 set incsearch
 
-"ËÑË÷¹Ø¼ü´Ê¸ßÁÁ
+"æœç´¢å…³é”®è¯é«˜äº®
 set hlsearch
 
-"ĞĞ¼ä¾à
+"è¡Œé—´è·
 set linespace=1
 
-"Ê¹ÓÃÎ¢ÈíÑÅºÚ×ÖÌå
+"ä½¿ç”¨å¾®è½¯é›…é»‘å­—ä½“
 "set guifontwide=YaHei\ Consolas\ Hybrid:h14
 
-"°´ÍêÕûµ¥´ÊÕÛĞĞ
+"æŒ‰å®Œæ•´å•è¯æŠ˜è¡Œ
 set nolinebreak
 
-"ÃüÁîĞĞÀúÊ·
+"å‘½ä»¤è¡Œå†å²
 "set history=819222
 
-"×Ô¶¯Óï·¨¸ßÁÁ
+"è‡ªåŠ¨è¯­æ³•é«˜äº®
 syntax on
-".vm Ê¹ÓÃ .html ¸ßÁÁ
+
+".vm æ–‡ä»¶ç±»å‹åˆ¤æ–­ä¸ºhtml
 au BufNewFile,BufRead *.vm set filetype=html
-
-"less¸ßÁÁ
+".lessæ–‡ä»¶ç±»å‹åˆ¤æ–­ä¸ºless
 "au BufNewFile,BufRead *.less set filetype=less
-
-"ts¸ßÁÁ
+".tsæ–‡ä»¶ç±»å‹åˆ¤æ–­ä¸ºtypescript
 "au BufNewFile,BufRead *.ts set filetype=typescript
 
-"¸²¸ÇÎÄ¼şÊ±²»±¸·İ£¬¹Ø±Õ×Ô¶¯±¸·İ
+"è¦†ç›–æ–‡ä»¶æ—¶ä¸å¤‡ä»½ï¼Œå…³é—­è‡ªåŠ¨å¤‡ä»½
 set nobackup
 
-"ÎÄ×ÖÑÕÉ«
+"æ–‡å­—é¢œè‰²
 colors default
 
-"ÎÄ¼ş¸ñÊ½
+"æ–‡ä»¶æ ¼å¼
 set fileformat=unix
 set fileformats=unix
 
-"±³¾°ÑÕÉ«
+"èƒŒæ™¯é¢œè‰²
 set background=dark
 
-"²»ÏÔÊ¾
-match Ignore \\
+"ä¸æ˜¾ç¤º
+match Ignore /\r/
+match Ignore /\r$/
+
+"å…‰æ ‡ç¢°åˆ°ç¬¬äº”è¡Œã€å€’æ•°ç¬¬äº”è¡Œæ—¶å°±ä¸Šä¸‹å·å±
+set scrolloff=5
+
+"å…‰æ ‡æ¢å¤åˆ°é€€å‡ºæ—¶çš„ä½ç½®
+au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|else|exe "norm $"|endif|endif
+
+"codeå¿«æ·é”®
+map <F9> :r ~/code/
+
+" set mapleader
+let mapleader = ","
 
 ""plugin
 filetype off
@@ -131,27 +154,49 @@ Plugin 'VundleVim/Vundle.vim'
 "Plugin 'user/L9', {'name': 'newL9'}
 
 " All of your Plugins must be added before the following line
+
+"è¡¥å…¨å±•ç¤º
+Plugin 'Valloric/YouCompleteMe'
+    let g:ycm_key_list_select_completion = ['', '']
+    let g:ycm_key_list_previous_completion = ['']
+    let g:ycm_key_invoke_completion = '<C-Space>'
+	let g:ycm_semantic_triggers =  {
+        \   'c' : ['->', '.'],
+        \   'objc' : ['->', '.', 're!\[[_a-zA-Z]+\w*\s', 're!^\s*[^\W\d]\w*\s', 're!\[.*\]\s'],
+        \   'ocaml' : ['.', '#'],
+        \   'cpp,objcpp' : ['->', '.', '::'],
+        \   'perl' : ['->'],
+        \   'php' : ['->', '::'],
+        \   'cs,java,javascript,typescript,d,python,perl6,scala,vb,elixir,go' : ['.'],
+        \   'ruby' : ['.', '::'],
+        \   'lua' : ['.', ':'],
+        \   'erlang' : [':'],
+        \ }
+
+"Plugin 'Shougo/neocomplete.vim'
+
+"nerdtreeæ–‡ä»¶æ ‘
 Plugin 'scrooloose/nerdtree'
 	map <C-n> :NERDTreeToggle<CR>
 	autocmd StdinReadPre * let s:std_in=1
-    "´ò¿ªvimÊ±Ä¬ÈÏ¹Ø±Õ
+    "æ‰“å¼€vimæ—¶é»˜è®¤å…³é—­
     "let NERDTreeQuitOnOpen=1
-	"Æô¶¯´ò¿ªnerdtree
+	"å¯åŠ¨æ‰“å¼€nerdtree
 	"autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 	"autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 	"number
 	let NERDTreeShowLineNumbers = 1
+    "netrw å¿½ç•¥éšè—æ–‡ä»¶å’Œpycæ–‡ä»¶
+    let g:netrw_list_hide =  '^\.[^\.],'
+    let g:netrw_list_hide .= '\.pyc$,'
 
+"ä»£ç æ³¨é‡Š
 Plugin 'The-NERD-Commenter'
-  let NERDShutUp=1
-  "Ö§³Öµ¥ĞĞºÍ¶àĞĞµÄÑ¡Ôñ£¬//¸ñÊ½
-  map <c-h> ,c<space>
+    let NERDShutUp=1
+    "æ”¯æŒå•è¡Œå’Œå¤šè¡Œçš„é€‰æ‹©ï¼Œ//æ ¼å¼
+    map <c-h> ,c<space>
 
-Plugin 'Valloric/YouCompleteMe'
-	let g:ycm_key_list_select_completion = ['', '']
-	let g:ycm_key_list_previous_completion = ['']
-	let g:ycm_key_invoke_completion = '<C-Space>'
-
+"å®šä½è·³è½¬
 Plugin 'Lokaltog/vim-easymotion'
 	let g:EasyMotion_smartcase = 1
 	"let g:EasyMotion_startofline = 0 " keep cursor colum when JK motion
@@ -159,9 +204,10 @@ Plugin 'Lokaltog/vim-easymotion'
 	map <Leader><Leader>j <Plug>(easymotion-j)
 	map <Leader><Leader>k <Plug>(easymotion-k)
 	map <Leader><leader>l <Plug>(easymotion-lineforward)
-	" ÖØ¸´ÉÏÒ»´Î²Ù×÷, ÀàËÆrepeat²å¼ş, ºÜÇ¿´ó
+	" é‡å¤ä¸Šä¸€æ¬¡æ“ä½œ, ç±»ä¼¼repeatæ’ä»¶, å¾ˆå¼ºå¤§
 	map <Leader><leader>. <Plug>(easymotion-repeat)
 
+"æ ¼å¼å¯¹é½
 Plugin 'godlygeek/tabular'
     nmap <Leader>a& :Tabularize /&<CR>
     vmap <Leader>a& :Tabularize /&<CR>
@@ -179,27 +225,118 @@ Plugin 'godlygeek/tabular'
     vmap <Leader>a<Bar> :Tabularize /<Bar><CR>
 
 Plugin 'fatih/vim-go'
+"tagbar
 Plugin 'majutsushi/tagbar'
+    nnoremap <silent> <F8> :TagbarToggle<CR>
+"cscope
 Plugin 'autoload_cscope.vim'
+"æ–‡ä»¶æœç´¢
 Plugin 'wincent/command-t'
 Plugin 'kien/ctrlp.vim'
+    " ctrlp
+    let g:ctrlp_map = '<c-p>'
+    let g:ctrlp_cmd = 'CtrlP'
+"å­—ç¬¦æœç´¢
 Plugin 'mileszs/ack.vim'
+    "ack æ–‡ä»¶æ–‡æœ¬å†…å®¹æœç´¢
+    map <F4> :Ack! -i  ~/project<left><left><left><left><left><left><left><left><left><left>
+"åŠ å‡ç¬¦å·ã€æ ‡ç­¾
 Plugin 'tpope/vim-surround'
+"vimçª—å£å…¨å±
 Plugin 'vim-scripts/ZoomWin'
+"ä»£ç å—å¼•æ“
 Plugin 'SirVer/ultisnips'
+    let g:UltiSnipsExpandTrigger="<tab>"
+    let g:UltiSnipsJumpForwardTrigger="<tab>"
+    let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+    "let g:UltiSnipsJumpForwardTrigger="<c-b>"
+    "let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+"ä»£ç å—åº“
+Plugin 'honza/vim-snippets'
 Plugin 'davidhalter/jedi-vim'
+"è¡Œå°¾ç©ºæ ¼æ ‡çº¢
 Plugin 'ShowTrailingWhitespace'
 "Plugin 'AutoClose'
+"%åŒ¹é…htmlæ ‡ç­¾
 Plugin 'matchit.zip'
+"çŠ¶æ€æ å¢å¼º
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
-"Plugin 'yonchu/accelerated-smooth-scroll'
+    let g:airline#extensions#tabline#enabled = 1 "tab æ 
+    let g:airline_powerline_fonts=1
 "Plugin 'scrooloose/syntastic'
-"js
+"æ ¼å¼æ ·å¼
 Plugin 'Yggdroot/indentLine'
     let g:indentLine_color_term = 239
     let g:indentLine_char = '|'
+"nginxè¯­æ³•é«˜äº®
 Plugin 'evanmiller/nginx-vim-syntax'
+"htmlè¡¥å…¨(zen coding)
+Plugin 'mattn/emmet-vim'
+	let g:user_emmet_mode='n'    "only enable normal mode functions.
+	let g:user_emmet_mode='inv'  "enable all functions, which is equal to
+	let g:user_emmet_mode='a'    "enable all function in all mode.
+    "è®¾ç½®Emmetåªå¯¹html/csså¯ç”¨
+	let g:user_emmet_install_global = 0
+	autocmd FileType html,css EmmetInstall
+"jshint
+Plugin 'Shutnik/jshint2.vim'
+    let jshint2_command = '/Users/zhangjk/.nvm/versions/node/v6.10.0/lib/node_modules/jshint/bin/jshint'
+    let jshint2_save = 1
+    " show next jshint error
+    nnoremap <silent><M-n> :lnext<CR>
+    inoremap <silent><M-n> <C-O>:lnext<CR>
+    vnoremap <silent><M-n> :lnext<CR>
+    exec "set <M-n>=\en"
+
+    " show previous jshint error
+    nnoremap <silent><M-p> :lprevious<CR>
+    inoremap <silent><M-p> <C-O>:lprevious<CR>
+    vnoremap <silent><M-p> :lprevious<CR>
+    exec "set <M-p>=\ep"
+"jsè¡¥å…¨
+Plugin 'marijnh/tern_for_vim'
+"jsdoc
+Plugin 'heavenshell/vim-jsdoc'
+    nmap <silent><C-l> <Plug>(jsdoc)
+"å¤šè¡Œæ“ä½œ
+Plugin 'terryma/vim-multiple-cursors'
+    let g:multi_cursor_use_default_mapping=0
+    " Default mapping
+    let g:multi_cursor_next_key='<C-m>'
+    let g:multi_cursor_prev_key='<C-p>'
+    let g:multi_cursor_skip_key='<C-x>'
+    let g:multi_cursor_quit_key='<Esc>'
+    " Default highlighting (see help :highlight and help :highlight-link)
+    highlight multiple_cursors_cursor term=reverse cterm=reverse gui=reverse
+    highlight link multiple_cursors_visual Visual
+"webè¯­æ³•é«˜äº®(æ¯”vimè‡ªå¸¦çš„å¥½ç”¨)
+"Plugin 'elzr/vim-json'
+Plugin 'othree/html5.vim'
+Plugin 'othree/yajs-core.vim'
+Plugin 'othree/javascript-libraries-syntax.vim'
+Plugin 'hail2u/vim-css3-syntax'
+Plugin 'cakebaker/scss-syntax.vim'
+"jsxé«˜äº®
+Plugin 'mxw/vim-jsx'
+    let g:syntastic_javascript_checkers = ['eslint']
+    let g:jsx_ext_required = 0
+"é«˜äº®åŒ¹é…htmlæ ‡ç­¾
+Plugin 'Valloric/MatchTagAlways'
+"é¢œè‰²ä»£ç é«˜äº®
+Plugin 'gorodinskiy/vim-coloresque'
+"è¯­æ³•åˆ†æ(ç”¨é€”ä¸æ¸…æ¥š)
+Plugin 'ynkdir/vim-vimlparser'
+"è«æ´›å‡¯
+"Plugin 'tomasr/molokai'
+    "let g:molokai_original = 1
+    "let g:rehash256 = 1
+    "set t_Co=256
+"å¤ªæ
+"Plugin 'altercation/vim-colors-solarized'
+    "let g:solarized_termcolors=256
+"ä»£ç æ£€æŸ¥(å¼€å¯ä¸äº†å‘¢ï¼Ÿ)
+"Plugin 'w0rp/ale'
 call vundle#end()            " required
 filetype plugin indent on    " required
 " To ignore plugin indent changes, instead use:
@@ -228,80 +365,11 @@ filetype plugin on
 
 
 
-" UltiSnips setting
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<c-b>"
-let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
-"taglist¿ì½İ¼ü
-nnoremap <silent> <F8> :TagbarToggle<CR>
 
-" ctrlp
-let g:ctrlp_map = '<c-p>'
-let g:ctrlp_cmd = 'CtrlP'
-
-"ack ÎÄ¼şÎÄ±¾ÄÚÈİËÑË÷
-map <F4> :Ack! -i  ~/project/go/src<left><left><left><left><left><left><left><left><left><left><left><left><left><left><left><left><left>
-
-"code¿ì½İ¼ü
-map <F9> :r ~/code/go_
-
-" set mapleader
-let mapleader = ","
-
-" vim-go custom mappings
-au FileType go nmap <Leader>s <Plug>(go-implements)
-au FileType go nmap <Leader>i <Plug>(go-info)
-au FileType go nmap <Leader>gd <Plug>(go-doc)
-au FileType go nmap <Leader>gv <Plug>(go-doc-vertical)
-au FileType go nmap <leader>r <Plug>(go-run)
-au FileType go nmap <leader>b <Plug>(go-build)
-au FileType go nmap <leader>ts <Plug>(go-test)
-au FileType go nmap <leader>c <Plug>(go-coverage)
-au FileType go nmap <Leader>ds <Plug>(go-def-split)
-au FileType go nmap <Leader>dv <Plug>(go-def-vertical)
-au FileType go nmap <Leader>dt <Plug>(go-def-tab)
-au FileType go nmap <Leader>e <Plug>(go-rename)
-
-" vim-go settings
-let g:go_fmt_command = "goimports"
-
-"godef
-let g:godef_split=3
-let g:godef_same_file_in_same_window=1
-
-"vimµİ¹é²éÕÒtagÎÄ¼ş
-set tags=tags;
-set autochdir
-
-"gotags
-let g:tagbar_type_go = {
-    \ 'ctagstype' : 'go',
-    \ 'kinds'     : [
-        \ 'p:package',
-        \ 'i:imports:1',
-        \ 'c:constants',
-        \ 'v:variables',
-        \ 't:types',
-        \ 'n:interfaces',
-        \ 'w:fields',
-        \ 'e:embedded',
-        \ 'm:methods',
-        \ 'r:constructor',
-        \ 'f:functions'
-    \ ],
-    \ 'sro' : '.',
-    \ 'kind2scope' : {
-        \ 't' : 'ctype',
-        \ 'n' : 'ntype'
-    \ },
-    \ 'scope2kind' : {
-        \ 'ctype' : 't',
-        \ 'ntype' : 'n'
-    \ },
-    \ 'ctagsbin'  : 'gotags',
-    \ 'ctagsargs' : '-sort -silent'
-\ }
+"vimé€’å½’æŸ¥æ‰¾tagæ–‡ä»¶
+"set tags=tags;
+"set autochdir
 
 " "goimports
 " if exists(#b:did_ftplugin_go_fmt#)
@@ -348,19 +416,19 @@ let g:tagbar_type_go = {
 let Tlist_Show_One_File=1
 let Tlist_Exit_OnlyWindow=1
 
-"Çå³ıwindowsÏÂµÄ»»ĞĞ
+"æ¸…é™¤windowsä¸‹çš„æ¢è¡Œ
 command -nargs=0 Clearwin : call Clearwin()
 function Clearwin()
 silent execute ':%s/\r//g'
 endfunction
 
-"tabËõ½ø
+"tabç¼©è¿›
 "nmap <tab> V>
 "nmap <s-tab> V<
 "vmap <tab> >gv
 "vmap <s-tab> <gv
 
-"¹â±êÒÆ¶¯µ½³É¶Ô·ûºÅÖĞ
+"å…‰æ ‡ç§»åŠ¨åˆ°æˆå¯¹ç¬¦å·ä¸­
 imap (*) ()<Left>
 imap [p] []<Left>
 imap {"} {}<Left><Return><Return><Up><tab>
@@ -369,47 +437,11 @@ imap ":" ""<Left>
 imap ';' ''<Left>
 imap <M> <><Left>
 
-"HTML²¹È«
-imap #= id=""<Left>
-imap .= class=""<Left>
-imap $= value=""<Left>
-imap ?= type=""<Left>
-imap ?/ src=""<Left>
-imap ?? href=""<Left>
-imap <i> <i></i><Esc>cit
-imap <a> <a></a><Esc>cit
-imap <A> <a><Return><Esc><Up>o
-imap <p> <p></p><Esc>cit
-imap <P> <p><Return><Return><Up><Tab>
-imap <h1> <h1></h1><Esc>cit
-imap <ul> <ul></ul><Esc>cit
-imap <UL> <ul><Return><Esc><Up>o
-imap <li> <li></li><Esc>cit
-imap <LI> <li><Return><Return><Up><Tab>
-imap <ulli> <ul><Return><Esc><Up>o<li>
-imap <input> <input type=""><Esc>hi
-imap <label> <label></label><Esc>cit
-imap <LABEL> <label class=""></label><Esc>7hi<Return><Esc><Up>o<input>
-imap <span> <span></span><Esc>cit
-imap <button> <button></button><Esc>cit
-imap <u> <u></u><Esc>cit
-imap <b> <b></b><Esc>cit
-imap <html> <html></html><Esc>cit<Return><Esc><Up>o
-imap <head> <head></head><Esc>cit<Return><Esc><Up>o
-imap <body> <body></body><Esc>cit<Return><Esc><Up>o
-imap <form> <form></form><Esc>cit<Return><Esc><Up>o
-imap <forminput> <form><input>
-imap <title> <title></title><Esc>cit<Return><Esc><Up>o
-imap <div> <div></div><Esc>cit
-imap <DIV> <div><Return><Esc><Up>o
-imap <option> <option></option><Esc>cit
-imap <select> <select></select><Esc>cit<Return><Esc><Up>o<option>
-
-"CSS²¹È«
+"CSSè¡¥å…¨
 imap ., . {}<Left><Return><Return><Up><Up><Right>
 imap #@ # {}<Left><Return><Return><Up><Up><Right>
 
-"JS²¹È«
+"JSè¡¥å…¨
 imap $# $("")<Left><Left>
 imap $$ $('')<Left><Left>
 imap $% $()<Left>
@@ -420,10 +452,9 @@ imap .: console.log();<Left><Left>
 "pdb
 imap .; import pdb<Return>pdb.set_trace()<ESC>
 
-"go:=
-imap \\ :=
-
-"ÅäÉ«ĞŞ¸Ä
+"é…è‰²ä¿®æ”¹
+"colorscheme molokai
+"colorscheme solarized
 hi CursorLine ctermbg=242
 hi Pmenu ctermbg=242 ctermfg=14
 hi PmenuSel ctermbg=248 ctermfg=green
@@ -434,12 +465,8 @@ hi LineNr ctermfg=green
 hi Normal ctermbg=black ctermfg=141
 hi String ctermfg=255
 
-"netrw
-let g:netrw_list_hide =  '^\.[^\.],'
-let g:netrw_list_hide .= '\.pyc$,'
-
-"×´Ì¬À¸ÉèÖÃ
-"ĞèÒªÔÚcolorsºó£¬´ó²¿·ÖÅäÉ«ÎÄ¼şÓĞhi clear
+"çŠ¶æ€æ è®¾ç½®
+"éœ€è¦åœ¨colorsåï¼Œå¤§éƒ¨åˆ†é…è‰²æ–‡ä»¶æœ‰hi clear
 hi User1 ctermfg=226
 hi User2 ctermfg=7
 hi User3 ctermfg=166
@@ -450,40 +477,3 @@ if version >= 700
     au InsertEnter * hi StatusLine ctermfg=226
     au InsertLeave * hi StatusLine ctermfg=19
 endif
-
-
-
-"   filetype plugin indent on           "´ò¿ªÎÄ¼şÅäÖÃ
-
-"   "°üÀ¨ÆäËû¸÷ÖÖÓïÑÔ£¬Èçphp java javascript ¶¼ÄÜ×Ô¶¯²¹È«
-
-"   autocmd FileType ruby,eruby set omnifunc=rubycomplete#Complete
-"   autocmd FileType python set omnifunc=pythoncomplete#Complete
-"   autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
-"   autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
-"   autocmd FileType css set omnifunc=csscomplete#CompleteCSS
-"   autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
-"   autocmd FileType java set omnifunc=javacomplete#Complete
-"   if has("autocmd") && exists("+omnifunc")
-"   autocmd Filetype *
-"   \ if &omnifunc == "" |
-"   \ setlocal omnifunc=syntaxcomplete#Complete |
-"   \ endif
-"   endif
-"   let g:rubycomplete_buffer_loading = 1
-"   let g:rubycomplete_classes_in_global = 1
-"   "let g:rubycomplete_rails = 1
-
-"   autocmd FileType java inoremap <buffer> . .<C-X><C-O><C-P>
-
-
-
-
-
-
-let g:go_highlight_functions = 1
-let g:go_highlight_methods = 1
-let g:go_highlight_structs = 1
-let g:go_highlight_interfaces = 1
-let g:go_highlight_operators = 1
-let g:go_highlight_build_constraints = 1
